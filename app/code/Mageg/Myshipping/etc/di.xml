@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="mageg_save_delivery_date_in_quote" type="Mageg\Myshipping\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1"/>
+    </type>
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="delivery_time" xsi:type="string">sales_order.delivery_time</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="mageg_checkout_layout_processor_add_delivery_block"
+                type="Mageg\Myshipping\Plugin\Checkout\Block\LayoutProcessor" sortOrder="1"/>
+    </type>
+    <!-- Set Rest API call -->
+    <preference for="Mageg\Myshipping\Api\DeliveryManagementInterface" type="Mageg\Myshipping\Model\DeliveryManagement"/>
+</config>

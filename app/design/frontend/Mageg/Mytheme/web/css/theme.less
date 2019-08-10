@@ -1,0 +1,12 @@
+// Create variables
+@base-color : #428bca;
+.color-theme { color: @base-color; }
+a {
+    color: ##0000FF;
+	text-decoration: none;
+	.transition(all 300ms);
+	&:hover, &:focus, &:active {
+		color: @base-color;
+		text-decoration: none;
+	}
+}
