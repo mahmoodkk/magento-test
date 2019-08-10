@@ -5,6 +5,6 @@
 */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::THEME,
-    'frontend/Mageg/mytheme',
+     'frontend/Mageg/luma_child',
     __DIR__
 );
