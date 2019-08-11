@@ -3,7 +3,7 @@
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="delivery_date_config_provider" xsi:type="object">Mageg\DeliveryDate\Model\DeliveryDateConfigProvider</item>
+                <item name="delivery_date_config_provider" xsi:type="object">Mageg\Myshipping\Model\DeliveryDateConfigProvider</item>
             </argument>
         </arguments>
     </type>
