@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mageg_cron" translate="label" type="text" sortOrder="1300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Admin Email Settings</label>
+            <tab>sales</tab>
+            <resource>Mageg_Cron::cron</resource>
+            <group id="general" type="text"  sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Extension Settings</label>
+            <field id="admin_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Admin Email </label>
+                    <comment>Write here admin email.</comment>
+                </field>
+             <field id="multiple_time" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Period for which notifications to be sent</label>
+                    <source_model>Mageg\Cron\Model\Config\Source\Custom</source_model>
+                </field>
+            <field id="addresses" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                   <label>Add Multiple Addresses for Email </label>
+                    <comment>put commas seperated email addresses</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
